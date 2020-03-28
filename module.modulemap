@@ -1,0 +1,25 @@
+
+framework module ALJPushService {
+
+  umbrella header "ALJPushService.h"
+
+  private header "JPUSHService.h"
+
+  link "libjpush-ios-3.3.2"
+  link "libjcore-ios-2.2.2"
+  link "z"
+  link "resolv"
+
+  link framework "CFNetwork"
+  link framework "CoreFoundation"
+  link framework "CoreTelephony"
+  link framework "SystemConfiguration"
+  link framework "CoreGraphics"
+  link framework "Security"
+  link framework "WebKit"
+  link framework "UserNotifications"
+
+  export *
+  module * { export * }
+
+}

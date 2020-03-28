@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4877F65D242F259400B40D19 /* ALJPushService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4877F65B242F259400B40D19 /* ALJPushService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4877F66B242F26E500B40D19 /* libjpush-ios-3.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877F668242F26E500B40D19 /* libjpush-ios-3.3.2.a */; };
+		4877F66C242F26E500B40D19 /* JPUSHService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4877F669242F26E500B40D19 /* JPUSHService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4877F66D242F26E500B40D19 /* libjcore-ios-2.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877F66A242F26E500B40D19 /* libjcore-ios-2.2.2.a */; };
+		4877F66F242F271500B40D19 /* ALJPushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4877F66E242F271500B40D19 /* ALJPushService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4877F658242F259400B40D19 /* ALJPushService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALJPushService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4877F65B242F259400B40D19 /* ALJPushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALJPushService.h; sourceTree = "<group>"; };
 		4877F65C242F259400B40D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4877F663242F262A00B40D19 /* podpublish.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podpublish.sh; sourceTree = "<group>"; };
+		4877F664242F262A00B40D19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4877F665242F262A00B40D19 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		4877F666242F262A00B40D19 /* ALJPushService.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ALJPushService.podspec; sourceTree = "<group>"; };
+		4877F668242F26E500B40D19 /* libjpush-ios-3.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libjpush-ios-3.3.2.a"; sourceTree = "<group>"; };
+		4877F669242F26E500B40D19 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		4877F66A242F26E500B40D19 /* libjcore-ios-2.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libjcore-ios-2.2.2.a"; sourceTree = "<group>"; };
+		4877F66E242F271500B40D19 /* ALJPushService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALJPushService.swift; sourceTree = "<group>"; };
+		4877F670242F275500B40D19 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4877F66D242F26E500B40D19 /* libjcore-ios-2.2.2.a in Frameworks */,
+				4877F66B242F26E500B40D19 /* libjpush-ios-3.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,7 +45,12 @@
 		4877F64E242F259400B40D19 = {
 			isa = PBXGroup;
 			children = (
-				4877F65A242F259400B40D19 /* ALJPushService */,
+				4877F666242F262A00B40D19 /* ALJPushService.podspec */,
+				4877F665242F262A00B40D19 /* module.modulemap */,
+				4877F663242F262A00B40D19 /* podpublish.sh */,
+				4877F664242F262A00B40D19 /* README.md */,
+				4877F670242F275500B40D19 /* Config.xcconfig */,
+				4877F65A242F259400B40D19 /* Source */,
 				4877F659242F259400B40D19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +63,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4877F65A242F259400B40D19 /* ALJPushService */ = {
+		4877F65A242F259400B40D19 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4877F667242F26E500B40D19 /* JPush */,
 				4877F65B242F259400B40D19 /* ALJPushService.h */,
 				4877F65C242F259400B40D19 /* Info.plist */,
+				4877F66E242F271500B40D19 /* ALJPushService.swift */,
 			);
-			path = ALJPushService;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4877F667242F26E500B40D19 /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+				4877F669242F26E500B40D19 /* JPUSHService.h */,
+				4877F668242F26E500B40D19 /* libjpush-ios-3.3.2.a */,
+				4877F66A242F26E500B40D19 /* libjcore-ios-2.2.2.a */,
+			);
+			path = JPush;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4877F65D242F259400B40D19 /* ALJPushService.h in Headers */,
+				4877F66C242F26E500B40D19 /* JPUSHService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +128,7 @@
 				TargetAttributes = {
 					4877F657242F259400B40D19 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -131,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4877F66F242F271500B40D19 /* ALJPushService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +174,7 @@
 /* Begin XCBuildConfiguration section */
 		4877F65E242F259400B40D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4877F670242F275500B40D19 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -202,6 +238,7 @@
 		};
 		4877F65F242F259400B40D19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4877F670242F275500B40D19 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -260,46 +297,61 @@
 		4877F661242F259400B40D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ALJPushService/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/JPush",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alirio.lau.www.ALJPushService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4877F662242F259400B40D19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ALJPushService/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/JPush",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alirio.lau.www.ALJPushService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

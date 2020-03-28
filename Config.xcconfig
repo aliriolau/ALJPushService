@@ -1,0 +1,30 @@
+//
+//                            Open Your Mind!
+//
+//                  .-~~~~~~~~~-._       _.-~~~~~~~~~-.
+//              __.'              ~.   .~              `.__
+//            .'//                  \./                  \\`.
+//          .'//                     |                     \\`.
+//        .'// .-~"""""""~~~~-._     |     _,-~~~~"""""""~-. \\`.
+//      .'//.-"                 `-.  |  .-'                 "-.\\`.
+//    .'//______.============-..   \ | /   ..-============.______\\`.
+//  .'______________________________\|/______________________________`.
+//
+//  Config.xcconfig
+//  ALJPushService
+//
+//  Created by Alirio Lau on 2020/3/28.
+//  Copyright © 2020 com.alirio.lau.www. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+// https://developer.apple.com/library/archive/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html
+
+OTHER_LDFLAGS = $(inherited) -ObjC
+
+MACH_O_TYPE = staticlib
+
+CONFIGURATION_BUILD_DIR = $(SRCROOT)/Framework
+
+MODULEMAP_FILE = $(SRCROOT)/module.modulemap
